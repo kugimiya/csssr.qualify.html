@@ -1,0 +1,10 @@
+include ./../blocks/AwesomeSection
+include ./../blocks/JSSlider
+
++AwesomeSection('javascript_skills', 'Уровень владения JavaScript')
+    +JSSlider('js_slider_group', [
+        {id: 'zero', label: 'Не владею'},
+        {id: 'A', label: 'Использую готовые решения'},
+        {id: 'B', label: 'Использую готовые решения и умею их переделывать'},
+        {id: 'C', checked: true, label: 'Пишу сложный JS с нуля'}
+    ])

@@ -1,0 +1,124 @@
+/*
+  Some magic with :before, that fits all screen ^^'
+  My own hack
+*/
+
+.js-slider {
+  &__scroller {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    transition: .15s left;
+
+    &.tracking-mode {
+      transition: none;
+
+      &:after {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        content: '';
+        z-index: 100;
+      }
+    }
+
+    &:before {
+      position: absolute;
+      bottom: 4px;
+      left: -7px;
+
+      content: '';
+      display: block;
+
+      width: 17px;
+      height: 14px;
+
+      cursor: all-scroll;
+
+      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAOCAYAAADJ7fe0AAACaklEQVQ4T43QPUwTYRwG8Oeu7bWX++gXRW0B8QMlOUVMjA6CECcHNtJB3ZwMrhpxNRoaFhMHWVwxGgYjCYkDAwkmLhgH04qCUD4KpXftXe+Ot+3148xpIKIivuP7/N9fnv9LxQFXrrN51KqU+KqHBbEaABoIcSx8qCLIAh1tUWSzm6jaNiz4sKY2sE0slMoEHqrygQIAKcoNi03cSLVcA8+JyMp5RIIhhAQWAl2HaWjwB/3IaSYychERLgBODEAzjbpubF34iUhgjvFHk30Xz5zMrq3i29oWGpQXSr4It9cHirIhCjx8LIvl5VWUyjUEDkVByqWxjwubQz8Q5/S3CT2nY+zsiZYwvGIYy5sK0hs5BA9HYRgEAUGErmpQCxoyuoUqw2UYu9KVXNcLu4gDPR7sGqfr5EaDciHQHIZcyCOr6NCKJrRiGV6GQzDUBNorgNC+my+n379w3u1Bxm5fjdGNynzRMHhSKmGbENQpN3JKAW6vHw3aAxftgsAw755Op3p3ttiDOJeJW5eGfR52JJdVoKs6FNWA7XYhEmuFYpjQ1YLVHmKlZzPri/sicUliOiXvnFU1zop+DrZl48tiGjqxwYdakFfyibeprQc7wB/r7AT3r7X18CI3S1F1tB6JQs7r+LqUQU6trXqaaWliRjYPRJyB53f6xmu1+o3kp8/ovXIZ6fQKTEIGHk4uTP0K7NvECR7Fz8WIVZnXi4Q/1dGBSFicup54PfA78E/ECe8Odt9bWlwZdbs8Zqyl6fyTydTuZ/7XOs5QPA4Xt3F8TtXUV2+SauJvLQ5s4gwM9bd3y3I6NZGEtR/yHQo9AksCzxoCAAAAAElFTkSuQmCC');
+    }
+
+    &-container {
+      height: 20px;
+
+      position: relative;
+
+      cursor: pointer;
+    }
+  }
+
+  &__items-container {
+    width: 100%;
+
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 20px;
+
+    border-top: 3px solid #4b3b35;
+  }
+
+  &__item {
+    display: inline-flex;
+    max-width: 25%;
+
+    padding-right: 10px;
+
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 19px;
+
+    position: relative;
+
+    cursor: pointer;
+
+    &:last-child {
+      padding-right: 0;
+      justify-content: flex-end;
+    }
+
+    &:first-child &-radio:before,
+    &:last-child &-radio:before {
+      height: 20px;
+    }
+
+    &:last-child &-radio {
+      left: auto;
+      right: 2px;
+    }
+  }
+
+  &__item-radio {
+    max-width: 1px;
+    max-height: 1px;
+    width: 1px;
+    height: 1px;
+    margin: 0;
+
+    position: absolute;
+    top: -20px;
+    left: 0;
+
+    outline: none;
+
+    &:before {
+      content: '';
+
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 3px;
+      height: 10px;
+
+      background-color: #4b3b35;
+    }
+  }
+
+  &__item-radio:focus ~ &__item-label {
+    outline: 2.5px solid #3b95ff;
+  }
+}

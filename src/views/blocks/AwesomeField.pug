@@ -1,0 +1,8 @@
+include ./../../node_modules/bemto.pug/bemto
+
+mixin AwesomeField(fieldId, fieldLabel, fieldValue)
+    +b.awesome-field
+        +e.label-wrapper
+            +e.LABEL(for=fieldId).label= fieldLabel
+        +e.input-wrapper
+            +e.INPUT(id=fieldId type="text" value=fieldValue).input

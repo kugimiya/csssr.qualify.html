@@ -1,0 +1,38 @@
+.heading {
+  height: 305px;
+  position: relative;
+
+  &__logo, &__stamp, &__title {
+    position: absolute;
+  }
+
+  &__logo {
+    width: 154px;
+    height: 52px;
+
+    left: 0px;
+    top: 60px;
+
+    background-image: url('../assets/images/logo.png');
+  }
+
+  &__stamp {
+    width: 252px;
+    height: 106px;
+
+    right: -58px;
+    top: 48px;
+
+    background-image: url('../assets/images/stamp.png');
+  }
+
+  &__title {
+    width: 221px;
+    height: 118px;
+
+    left: 257px;
+    top: 154px;
+
+    background-image: url('../assets/images/title.png');
+  }
+}

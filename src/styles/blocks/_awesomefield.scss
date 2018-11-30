@@ -1,0 +1,45 @@
+.awesome-field {
+  display: flex;
+  padding-bottom: 18.3px;
+
+  &__input {
+    background-color: transparent;
+    border: 0;
+    width: 100%;
+
+
+    font-family: "Courier New";
+    font-size: 30px;
+
+    padding: 0 17px 10px;
+    height: 44px;
+
+    &:focus {
+      font-weight: bolder;
+    }
+
+    &-wrapper {
+      display: inline-flex;
+      width: 100%;
+
+      margin-left: 15px;
+
+      background-image: url("../assets/images/line.png");
+      background-position: top left;
+      background-repeat: repeat-x;
+    }
+  }
+
+  &__label {
+    display: inline-flex;
+    align-items: flex-end;
+
+    font-size: 22.43px;
+    font-weight: 700;
+
+    &-wrapper {
+      display: inline-flex;
+      flex-shrink: 0;
+    }
+  }
+}

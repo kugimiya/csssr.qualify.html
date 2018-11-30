@@ -1,0 +1,32 @@
+/*
+  Very funny ^^'
+*/
+
+.grid-system {
+  display: flex;
+  padding-bottom: 6px;
+
+  &__column {
+    flex-basis: 33.3333%;
+    max-width: 33.3333%;
+    min-width: 33.3333%;
+
+    &-first {
+      flex-basis: 258px;
+      max-width: 258px;
+      min-width: 258px;
+    }
+
+    &-second {
+      flex-basis: 270px;
+      max-width: 270px;
+      min-width: 270px;
+    }
+
+    &-third {
+      flex-basis: 242px;
+      max-width: 242px;
+      min-width: 242px;
+    }
+  }
+}

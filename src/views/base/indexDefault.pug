@@ -1,0 +1,13 @@
+include ./../../node_modules/bemto.pug/bemto
+
+include ./head
+include ./scripts
+
+mixin indexDefault()
+    doctype html
+    html(lang='ru')
+        +head
+        body
+            +b.ARTICLE.page
+                block
+            +scripts

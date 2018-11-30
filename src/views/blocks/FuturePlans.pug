@@ -1,0 +1,16 @@
+include ./../../node_modules/bemto.pug/bemto
+
+mixin FuturePlan(groupName, item)
+    +b.future-plan
+        +e.container
+            +e.wrapper
+                +e.INPUT(id=item.id type="radio" name=groupName checked=item.checked ? item.checked : false).radio
+                +e.LABEL(for=item.id).radio-label
+                    +e.SPAN.radio-custom
+                    +e.SPAN.label= item.label
+
+mixin FuturePlans(groupName, items)
+    +b.future-plans-list
+        each item in items
+            +e.item
+                +FuturePlan(groupName, item)

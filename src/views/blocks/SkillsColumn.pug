@@ -1,0 +1,13 @@
+include ./../../node_modules/bemto.pug/bemto
+
+mixin SkillItem(item)
+    +b.skill-item
+        +e.LABEL(for=item.id).item-wrapper
+            +e.INPUT(type="checkbox" checked=item.checked ? item.checked : false id=item.id).checkbox
+            +e.SPAN.checkbox-custom
+            +e.label
+                block
+
+mixin SkillsColumn()
+    +b.skills-column
+        block

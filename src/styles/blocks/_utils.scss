@@ -1,0 +1,37 @@
+@import "./fonts";
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 24px;
+  font-family: 'PT Sans', sans-serif;
+
+  background-color: #797979;
+}
+
+input {
+  font-family: 'Courier New', serif;
+}
+
+.page {
+  width: 1000px;
+  padding: 0 112px;
+
+  background-image: url('../assets/images/paper.jpg');
+}
+
+
+.about-text-input {
+  background-image: url('../assets/images/line.png');
+  background-size: 695px 60px;
+  background-position-y: 5px;
+
+  font-family: 'Courier New', serif;
+  font-size: 30px;
+  font-weight: 100;
+  line-height: 2;
+
+  min-height: 180px;
+}

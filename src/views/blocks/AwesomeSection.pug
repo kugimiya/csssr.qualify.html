@@ -1,0 +1,16 @@
+include ./../../node_modules/bemto.pug/bemto
+
+mixin AwesomeSection(sectionId, heading, subHeading)
+    +b.SECTION(id=sectionId).block
+
+        if (heading || subHeading)
+            +e.HEADER.title
+                if heading
+                    +e.H4.heading= heading
+
+                if subHeading
+                    +e.P.subheading= subHeading
+
+        if block
+            +e.body
+                block

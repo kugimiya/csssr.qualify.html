@@ -1,0 +1,12 @@
+include ./../../node_modules/bemto.pug/bemto
+
+mixin JSSlider(groupName, items)
+    +b.js-slider
+        +e.scroller-container
+            +e.SPAN(data-scroller).scroller
+
+        +e.items-container
+            each item in items
+                +e.LABEL(for=item.id data-item data-checked=item.checked ? "true" : "false").item
+                    +e.INPUT(type="radio" name=groupName id=item.id checked=item.checked ? item.checked : false).item-radio
+                    +e.SPAN.item-label= item.label

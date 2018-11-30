@@ -1,0 +1,64 @@
+include ./../../node_modules/bemto.pug/bemto
+
+include ./../blocks/AwesomeSection
+include ./../blocks/SkillsColumn
+
++AwesomeSection(
+'skills_list',
+'Расскажите о себе чекбоксами',
+'Отметьте чекбоксами пункты, которые соответствуют вашим скиллам. '
++ 'Кстати, отсутствие опыта не означает, что у вас меньше шансов '
++ 'стать одним из наших товарищей. Это означает, что вы будете '
++ 'получать те задачи, с которыми гарантировано будете справляться.'
+)
+
+    +b.grid-system
+        +e.column-first
+            +SkillsColumn()
+                +SkillItem({checked: true, id: 'methodology'})
+                    | БЭМ/OOCSS
+                +SkillItem({checked: true, id: 'html_prepros'})
+                    | Pug (Jade)
+                +SkillItem({checked: true, id: 'css_prepros'})
+                    | Stylus/LESS/SASS
+                +SkillItem({id: 'work_with_svg'})
+                    | Работаю с SVG
+                +SkillItem({checked: true, id: 'html_semantic'})
+                    | Верстаю семантично
+                +SkillItem({id: 'work_with_a11y'})
+                    | Accessibility (A11Y)
+                +SkillItem({checked: true, id: 'normal_javascript'})
+                    | ES2015/ES2016
+
+
+        +e.column-second
+            +SkillsColumn()
+                +SkillItem({checked: true, id: 'task_management'})
+                    | Gulp/GRUNT
+                +SkillItem({checked: true, id: 'build_system'})
+                    | Webpack
+                +SkillItem({id: 'webgl_friendly'})
+                    | Дружу с WebGL
+                +SkillItem({checked: true, id: 'jquery_friendly'})
+                    | jQuery
+                +SkillItem({id: 'angular_know'})
+                    | Знаю/изучаю Angular
+                +SkillItem({checked: true, id: 'react_know'})
+                    | Знаю/изучаю React
+                +SkillItem({checked: true, id: 'node_know'})
+                    | Знаю/изучаю Node.js
+
+
+        +e.column-third
+            +SkillsColumn()
+                +SkillItem({checked: true, id: 'git_usage'})
+                    | Использую Git
+                +SkillItem({checked: true, id: 'eyes_ok'})
+                    | С глазомером всё ок
+                +SkillItem({id: 'blog_read'})
+                    span #{'Читаю '}
+                        a(href="http://blog.csssr.ru/") blog.csssr.ru
+                +SkillItem({checked: true, id: 'lazy_code'})
+                    | Я ленивый(-ая)
+                +SkillItem({checked: true, id: 'need_to_knows_well'})
+                    | У меня хороший английский

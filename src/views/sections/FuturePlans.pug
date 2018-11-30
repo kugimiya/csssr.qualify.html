@@ -1,0 +1,14 @@
+include ./../blocks/AwesomeSection
+include ./../blocks/FuturePlans
+
++AwesomeSection(
+'future_plans',
+'Какие у вас планы на будущее?',
+'Этот ответ ни на что не повлияет. Не беда, если в будущем ваши планы поменяются.'
+)
+    +FuturePlans('future_plans_group', [
+        {id: 'html_dev', label: 'Верстать'},
+        {id: 'js_dev', checked: true, label: 'Прокачиваться в JS'},
+        {id: 'management', label: 'Менеджерство'},
+        {id: 'other', label: 'Другое'}
+    ])

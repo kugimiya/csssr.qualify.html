@@ -1,0 +1,38 @@
+.block {
+  padding-top: 35px;
+
+  &#user_credentials {
+    padding-top: 0;
+  }
+
+  &#about_section {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 18px;
+
+    .block__body {
+      padding-top: 26px;
+    }
+  }
+
+  &#future_plans {
+    .block__body {
+      padding-top: 0;
+      padding-bottom: 20px;
+    }
+  }
+
+  &__heading {
+    line-height: (49.83 / 24);
+    font-size: 1em;
+  }
+
+  &__subheading {
+    line-height: (23 / 15);
+    font-size: .625em;
+  }
+
+  &__body {
+    padding-top: 20px;
+  }
+}
